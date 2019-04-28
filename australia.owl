@@ -1,0 +1,1829 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania">
+    <Prefix name="" IRI="http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Ambush"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Amphibians"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Animal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Beak"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Birds"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Blotched_blue-tongued_lizard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Carnivore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Claw"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Climbing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coastal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cold-blooded"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Common_wombat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Eastern_grey_kangaroo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Eastern_ground_parrot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Endangered"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Environement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fang"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ferret"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flying"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Frog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Goat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Grassland"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Growling_grass_frog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heaths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Herbivore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Horn"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lizard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Locomotion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lowland_copperhead"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mammal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Marsupials"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Monotremes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mountain_dragon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Near_water"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Omnivore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ovipare"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Peregrine_falcon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Placentals"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Platypus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predation_strategy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reptile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rock_dove"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Short-beaked_echidna"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Skink"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Slithering"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Snake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Southern_brown_tree_frog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sugar_glider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Swimming"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tasmanian_devil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tasmanian_froglet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tawny_frogmouth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Thermoregulation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tiger_snake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Toxic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Trap"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vivipare"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Walking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Warm-blooded"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Water"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weapons"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wedge-tailed_eagle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#White-lipped_snake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wild_boar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Woodlands"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gould&apos;s_wattled_bat"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#attacks_with"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defends_with"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eats"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_eaten_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#lives_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#moves_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#predates_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#regulates_temperature_by"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#carry_young_in_pouch"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#conservation_status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hibernates"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#is_endogenous"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#is_nocturnal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#is_poisonous"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#is_venomous"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#lay_eggs"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Carnivore"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Animal"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#eats"/>
+                <Class IRI="#Animal"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Endangered"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>CR</Literal>
+                <Literal>EN</Literal>
+                <Literal>EW</Literal>
+                <Literal>VU</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Herbivore"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Animal"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#eats"/>
+                <ObjectUnionOf>
+                    <Class IRI="#Plant"/>
+                    <ObjectAllValuesFrom>
+                        <ObjectProperty IRI="#part_of"/>
+                        <Class IRI="#Plant"/>
+                    </ObjectAllValuesFrom>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Marsupials"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Mammal"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#carry_young_in_pouch"/>
+                <DataOneOf>
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                </DataOneOf>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Monotremes"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Mammal"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#lay_eggs"/>
+                <DataOneOf>
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                </DataOneOf>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Ovipare"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Animal"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#lay_eggs"/>
+                <DataOneOf>
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                </DataOneOf>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Toxic"/>
+        <ObjectUnionOf>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#is_poisonous"/>
+                <DataOneOf>
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                </DataOneOf>
+            </DataAllValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#is_venomous"/>
+                <DataOneOf>
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                </DataOneOf>
+            </DataAllValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Vivipare"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Animal"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#lay_eggs"/>
+                <DataOneOf>
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+                </DataOneOf>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Ambush"/>
+        <Class IRI="#Predation_strategy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Amphibians"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Amphibians"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#lives_in"/>
+            <ObjectUnionOf>
+                <Class IRI="#Near_water"/>
+                <Class IRI="#Water"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Amphibians"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#regulates_temperature_by"/>
+            <Class IRI="#Cold-blooded"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Animal"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <ObjectUnionOf>
+                <Class IRI="#Animal"/>
+                <Class IRI="#Plant"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bat"/>
+        <Class IRI="#Mammal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Beak"/>
+        <Class IRI="#Weapons"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Birds"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Birds"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#attacks_with"/>
+            <ObjectUnionOf>
+                <Class IRI="#Beak"/>
+                <Class IRI="#Claw"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Birds"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#regulates_temperature_by"/>
+            <Class IRI="#Warm-blooded"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Birds"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#carry_young_in_pouch"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Birds"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Birds"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#lay_eggs"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blotched_blue-tongued_lizard"/>
+        <Class IRI="#Skink"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blotched_blue-tongued_lizard"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#lives_in"/>
+            <ObjectUnionOf>
+                <Class IRI="#Heaths"/>
+                <Class IRI="#Woodlands"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blotched_blue-tongued_lizard"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Climbing"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blotched_blue-tongued_lizard"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blotched_blue-tongued_lizard"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#lay_eggs"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Carnivore"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chase"/>
+        <Class IRI="#Predation_strategy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Claw"/>
+        <Class IRI="#Weapons"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Climbing"/>
+        <Class IRI="#Locomotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coastal"/>
+        <Class IRI="#Environement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cold-blooded"/>
+        <Class IRI="#Thermoregulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Common_wombat"/>
+        <Class IRI="#Marsupials"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Common_wombat"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Plant"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Common_wombat"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#lives_in"/>
+            <ObjectUnionOf>
+                <Class IRI="#Coastal"/>
+                <Class IRI="#Grassland"/>
+                <Class IRI="#Woodlands"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Common_wombat"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <Class IRI="#Walking"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Common_wombat"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>LC</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Common_wombat"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Common_wombat"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Common_wombat"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_nocturnal"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_grey_kangaroo"/>
+        <Class IRI="#Marsupials"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_grey_kangaroo"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Plant"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_grey_kangaroo"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#lives_in"/>
+            <ObjectUnionOf>
+                <Class IRI="#Coastal"/>
+                <Class IRI="#Grassland"/>
+                <Class IRI="#Woodlands"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_grey_kangaroo"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <Class IRI="#Walking"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_grey_kangaroo"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>LC</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_grey_kangaroo"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_ground_parrot"/>
+        <Class IRI="#Birds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_ground_parrot"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#lives_in"/>
+            <ObjectUnionOf>
+                <Class IRI="#Coastal"/>
+                <Class IRI="#Grassland"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_ground_parrot"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <Class IRI="#Walking"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_ground_parrot"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>LC</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fang"/>
+        <Class IRI="#Weapons"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ferret"/>
+        <Class IRI="#Placentals"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ferret"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Climbing"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ferret"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Flying"/>
+        <Class IRI="#Locomotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Frog"/>
+        <Class IRI="#Amphibians"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Frog"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#carry_young_in_pouch"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Frog"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_poisonous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Goat"/>
+        <Class IRI="#Placentals"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Goat"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Climbing"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Goat"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Grassland"/>
+        <Class IRI="#Environement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Growling_grass_frog"/>
+        <Class IRI="#Frog"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Growling_grass_frog"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Climbing"/>
+                <Class IRI="#Swimming"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Growling_grass_frog"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>EN</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Growling_grass_frog"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Growling_grass_frog"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_nocturnal"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heaths"/>
+        <Class IRI="#Environement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Herbivore"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Horn"/>
+        <Class IRI="#Weapons"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lizard"/>
+        <Class IRI="#Reptile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lizard"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Animal"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lizard"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#predates_by"/>
+            <Class IRI="#Ambush"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lizard"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#carry_young_in_pouch"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lowland_copperhead"/>
+        <Class IRI="#Snake"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lowland_copperhead"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <ObjectUnionOf>
+                <Class IRI="#Frog"/>
+                <Class IRI="#Lizard"/>
+                <Class IRI="#Snake"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lowland_copperhead"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#lives_in"/>
+            <Class IRI="#Near_water"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lowland_copperhead"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <Class IRI="#Slithering"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lowland_copperhead"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_venomous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mammal"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mammal"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#regulates_temperature_by"/>
+            <Class IRI="#Warm-blooded"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Marsupials"/>
+        <Class IRI="#Mammal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monotremes"/>
+        <Class IRI="#Mammal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mountain_dragon"/>
+        <Class IRI="#Lizard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mountain_dragon"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#lives_in"/>
+            <ObjectUnionOf>
+                <Class IRI="#Heaths"/>
+                <Class IRI="#Woodlands"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mountain_dragon"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Climbing"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mountain_dragon"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>LC</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mountain_dragon"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Near_water"/>
+        <Class IRI="#Environement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Omnivore"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Peregrine_falcon"/>
+        <Class IRI="#Birds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Peregrine_falcon"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Animal"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Peregrine_falcon"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Flying"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Peregrine_falcon"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#predates_by"/>
+            <Class IRI="#Chase"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Peregrine_falcon"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>LC</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Peregrine_falcon"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Placentals"/>
+        <Class IRI="#Mammal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Platypus"/>
+        <Class IRI="#Monotremes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Platypus"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Swimming"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Platypus"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Platypus"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_poisonous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reptile"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reptile"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#regulates_temperature_by"/>
+            <Class IRI="#Cold-blooded"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rock_dove"/>
+        <Class IRI="#Birds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rock_dove"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Flying"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Short-beaked_echidna"/>
+        <Class IRI="#Monotremes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Short-beaked_echidna"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <Class IRI="#Walking"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Short-beaked_echidna"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Skink"/>
+        <Class IRI="#Lizard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Slithering"/>
+        <Class IRI="#Locomotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Snake"/>
+        <Class IRI="#Reptile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Snake"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#attacks_with"/>
+            <Class IRI="#Fang"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Snake"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Animal"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Snake"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#predates_by"/>
+            <Class IRI="#Ambush"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Snake"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#carry_young_in_pouch"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Snake"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#lay_eggs"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Southern_brown_tree_frog"/>
+        <Class IRI="#Frog"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Southern_brown_tree_frog"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Swimming"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Southern_brown_tree_frog"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>LC</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Southern_brown_tree_frog"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sugar_glider"/>
+        <Class IRI="#Marsupials"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sugar_glider"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <ObjectUnionOf>
+                <Class IRI="#Birds"/>
+                <Class IRI="#Lizard"/>
+                <Class IRI="#Plant"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sugar_glider"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Climbing"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sugar_glider"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>LC</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sugar_glider"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sugar_glider"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Swimming"/>
+        <Class IRI="#Locomotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tasmanian_devil"/>
+        <Class IRI="#Marsupials"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tasmanian_devil"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <ObjectUnionOf>
+                <Class IRI="#Animal"/>
+                <Class IRI="#Plant"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tasmanian_devil"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <Class IRI="#Walking"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tasmanian_devil"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>EN</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tasmanian_devil"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tasmanian_froglet"/>
+        <Class IRI="#Frog"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tasmanian_froglet"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Swimming"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tasmanian_froglet"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>LC</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tasmanian_froglet"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tawny_frogmouth"/>
+        <Class IRI="#Birds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tawny_frogmouth"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Flying"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tawny_frogmouth"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>LC</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tawny_frogmouth"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tawny_frogmouth"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_nocturnal"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tiger_snake"/>
+        <Class IRI="#Snake"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tiger_snake"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#lives_in"/>
+            <Class IRI="#Near_water"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tiger_snake"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <Class IRI="#Slithering"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tiger_snake"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tiger_snake"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_venomous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trap"/>
+        <Class IRI="#Predation_strategy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Walking"/>
+        <Class IRI="#Locomotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Warm-blooded"/>
+        <Class IRI="#Thermoregulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Water"/>
+        <Class IRI="#Environement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wedge-tailed_eagle"/>
+        <Class IRI="#Birds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wedge-tailed_eagle"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Animal"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wedge-tailed_eagle"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Flying"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wedge-tailed_eagle"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#predates_by"/>
+            <Class IRI="#Chase"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wedge-tailed_eagle"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>LC</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#White-lipped_snake"/>
+        <Class IRI="#Snake"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#White-lipped_snake"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Skink"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#White-lipped_snake"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <Class IRI="#Slithering"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#White-lipped_snake"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#White-lipped_snake"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_venomous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wild_boar"/>
+        <Class IRI="#Placentals"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wild_boar"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <ObjectUnionOf>
+                <Class IRI="#Frog"/>
+                <Class IRI="#Lizard"/>
+                <Class IRI="#Plant"/>
+                <Class IRI="#Snake"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wild_boar"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <Class IRI="#Walking"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wild_boar"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>LC</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wild_boar"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wild_boar"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Woodlands"/>
+        <Class IRI="#Environement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gould&apos;s_wattled_bat"/>
+        <Class IRI="#Bat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gould&apos;s_wattled_bat"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#lives_in"/>
+            <Class IRI="#Woodlands"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gould&apos;s_wattled_bat"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Flying"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gould&apos;s_wattled_bat"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#conservation_status"/>
+            <DataOneOf>
+                <Literal>LC</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gould&apos;s_wattled_bat"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gould&apos;s_wattled_bat"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gould&apos;s_wattled_bat"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_nocturnal"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Amphibians"/>
+        <Class IRI="#Birds"/>
+        <Class IRI="#Mammal"/>
+        <Class IRI="#Reptile"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Animal"/>
+        <Class IRI="#Plant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Lizard"/>
+        <Class IRI="#Snake"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Marsupials"/>
+        <Class IRI="#Monotremes"/>
+        <Class IRI="#Placentals"/>
+    </DisjointClasses>
+    <DisjointUnion>
+        <Class IRI="#Omnivore"/>
+        <Class IRI="#Carnivore"/>
+        <Class IRI="#Herbivore"/>
+    </DisjointUnion>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#eats"/>
+        <ObjectInverseOf>
+            <ObjectProperty IRI="#is_eaten_by"/>
+        </ObjectInverseOf>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#is_eaten_by"/>
+        <ObjectInverseOf>
+            <ObjectProperty IRI="#eats"/>
+        </ObjectInverseOf>
+    </EquivalentObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#attacks_with"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#defends_with"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eats"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#is_eaten_by"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#lives_in"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#moves_by"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#predates_by"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#regulates_temperature_by"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#eats"/>
+        <ObjectProperty IRI="#is_eaten_by"/>
+    </InverseObjectProperties>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#part_of"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#attacks_with"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#defends_with"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#eats"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_eaten_by"/>
+        <ObjectUnionOf>
+            <Class IRI="#Animal"/>
+            <Class IRI="#Plant"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#lives_in"/>
+        <ObjectUnionOf>
+            <Class IRI="#Animal"/>
+            <Class IRI="#Plant"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#moves_by"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#part_of"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#predates_by"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#regulates_temperature_by"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#attacks_with"/>
+        <Class IRI="#Weapons"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#defends_with"/>
+        <Class IRI="#Weapons"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#eats"/>
+        <ObjectUnionOf>
+            <Class IRI="#Animal"/>
+            <Class IRI="#Plant"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_eaten_by"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#lives_in"/>
+        <Class IRI="#Environement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#moves_by"/>
+        <Class IRI="#Locomotion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#part_of"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#predates_by"/>
+        <Class IRI="#Predation_strategy"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#regulates_temperature_by"/>
+        <Class IRI="#Thermoregulation"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#is_endogenous"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#is_nocturnal"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#is_poisonous"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#is_venomous"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#lay_eggs"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#carry_young_in_pouch"/>
+        <Class IRI="#Animal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#conservation_status"/>
+        <ObjectUnionOf>
+            <Class IRI="#Animal"/>
+            <Class IRI="#Plant"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hibernates"/>
+        <Class IRI="#Animal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#is_endogenous"/>
+        <ObjectUnionOf>
+            <Class IRI="#Animal"/>
+            <Class IRI="#Plant"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#is_nocturnal"/>
+        <Class IRI="#Animal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#is_poisonous"/>
+        <ObjectUnionOf>
+            <Class IRI="#Animal"/>
+            <Class IRI="#Plant"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#is_venomous"/>
+        <ObjectUnionOf>
+            <Class IRI="#Animal"/>
+            <Class IRI="#Plant"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#lay_eggs"/>
+        <Class IRI="#Animal"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#carry_young_in_pouch"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#conservation_status"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hibernates"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#is_endogenous"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#is_nocturnal"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#is_poisonous"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#is_venomous"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#lay_eggs"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Marsupials</IRI>
+        <Literal>The Monotreme are partly distinguishable from other mammals in that most of the young are carried in a pouch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Monotremes</IRI>
+        <Literal>The Monotreme are partly distinguishable from other mammals in that they lay eggs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Placentals</IRI>
+        <Literal>The Placentals are partly distinguishable from other mammals in that the fetus is carried in the uterus of its mother to a relatively late stage of development.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
