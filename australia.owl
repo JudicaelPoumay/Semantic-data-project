@@ -97,6 +97,12 @@
         <Class IRI="#Horn"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Insect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Large_animal"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Lizard"/>
     </Declaration>
     <Declaration>
@@ -142,6 +148,12 @@
         <Class IRI="#Predation_strategy"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Predator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prey"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Reptile"/>
     </Declaration>
     <Declaration>
@@ -155,6 +167,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Slithering"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Small_animal"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Snake"/>
@@ -270,14 +285,29 @@
     <Declaration>
         <DataProperty IRI="#lay_eggs"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Blochy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Danger_noodle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Jacqueline"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Platy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kango"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="#Carnivore"/>
         <ObjectIntersectionOf>
             <Class IRI="#Animal"/>
-            <ObjectAllValuesFrom>
+            <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#eats"/>
                 <Class IRI="#Animal"/>
-            </ObjectAllValuesFrom>
+            </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -345,6 +375,38 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Predator"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Animal"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#is_eaten_by"/>
+                    <Class IRI="#Animal"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#eats"/>
+                <Class IRI="#Animal"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Prey"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Animal"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#eats"/>
+                    <Class IRI="#Animal"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_eaten_by"/>
+                <Class IRI="#Animal"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Toxic"/>
         <ObjectUnionOf>
             <DataAllValuesFrom>
@@ -383,13 +445,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Amphibians"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#lives_in"/>
             <ObjectUnionOf>
                 <Class IRI="#Near_water"/>
                 <Class IRI="#Water"/>
             </ObjectUnionOf>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Amphibians"/>
@@ -400,13 +462,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Animal"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#eats"/>
             <ObjectUnionOf>
                 <Class IRI="#Animal"/>
                 <Class IRI="#Plant"/>
             </ObjectUnionOf>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Bat"/>
@@ -422,13 +484,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Birds"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#attacks_with"/>
             <ObjectUnionOf>
                 <Class IRI="#Beak"/>
                 <Class IRI="#Claw"/>
             </ObjectUnionOf>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Birds"/>
@@ -470,13 +532,17 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Blotched_blue-tongued_lizard"/>
-        <ObjectAllValuesFrom>
+        <Class IRI="#Small_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blotched_blue-tongued_lizard"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#lives_in"/>
             <ObjectUnionOf>
                 <Class IRI="#Heaths"/>
                 <Class IRI="#Woodlands"/>
             </ObjectUnionOf>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Blotched_blue-tongued_lizard"/>
@@ -532,25 +598,29 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Common_wombat"/>
+        <Class IRI="#Large_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Common_wombat"/>
         <Class IRI="#Marsupials"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Common_wombat"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#eats"/>
             <Class IRI="#Plant"/>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Common_wombat"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#lives_in"/>
             <ObjectUnionOf>
                 <Class IRI="#Coastal"/>
                 <Class IRI="#Grassland"/>
                 <Class IRI="#Woodlands"/>
             </ObjectUnionOf>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Common_wombat"/>
@@ -597,25 +667,29 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Eastern_grey_kangaroo"/>
+        <Class IRI="#Large_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_grey_kangaroo"/>
         <Class IRI="#Marsupials"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Eastern_grey_kangaroo"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#eats"/>
             <Class IRI="#Plant"/>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Eastern_grey_kangaroo"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#lives_in"/>
             <ObjectUnionOf>
                 <Class IRI="#Coastal"/>
                 <Class IRI="#Grassland"/>
                 <Class IRI="#Woodlands"/>
             </ObjectUnionOf>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Eastern_grey_kangaroo"/>
@@ -645,6 +719,10 @@
     <SubClassOf>
         <Class IRI="#Eastern_ground_parrot"/>
         <Class IRI="#Birds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_ground_parrot"/>
+        <Class IRI="#Small_animal"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Eastern_ground_parrot"/>
@@ -682,6 +760,17 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ferret"/>
+        <Class IRI="#Small_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ferret"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Small_animal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ferret"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#moves_by"/>
             <ObjectUnionOf>
@@ -709,6 +798,17 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Frog"/>
+        <Class IRI="#Small_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Frog"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Insect"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Frog"/>
         <DataAllValuesFrom>
             <DataProperty IRI="#carry_young_in_pouch"/>
             <DataOneOf>
@@ -724,6 +824,10 @@
                 <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Goat"/>
+        <Class IRI="#Large_animal"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Goat"/>
@@ -807,15 +911,23 @@
         <Class IRI="#Weapons"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Insect"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Large_animal"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Lizard"/>
         <Class IRI="#Reptile"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Lizard"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#eats"/>
             <Class IRI="#Animal"/>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Lizard"/>
@@ -835,25 +947,35 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Lowland_copperhead"/>
+        <Class IRI="#Large_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lowland_copperhead"/>
         <Class IRI="#Snake"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Lowland_copperhead"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#eats"/>
-            <ObjectUnionOf>
-                <Class IRI="#Frog"/>
-                <Class IRI="#Lizard"/>
-                <Class IRI="#Snake"/>
-            </ObjectUnionOf>
-        </ObjectAllValuesFrom>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#eats"/>
+                <Class IRI="#Small_animal"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#eats"/>
+                <ObjectUnionOf>
+                    <Class IRI="#Frog"/>
+                    <Class IRI="#Lizard"/>
+                    <Class IRI="#Snake"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Lowland_copperhead"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#lives_in"/>
             <Class IRI="#Near_water"/>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Lowland_copperhead"/>
@@ -896,13 +1018,17 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mountain_dragon"/>
-        <ObjectAllValuesFrom>
+        <Class IRI="#Small_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mountain_dragon"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#lives_in"/>
             <ObjectUnionOf>
                 <Class IRI="#Heaths"/>
                 <Class IRI="#Woodlands"/>
             </ObjectUnionOf>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mountain_dragon"/>
@@ -946,10 +1072,14 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Peregrine_falcon"/>
-        <ObjectAllValuesFrom>
+        <Class IRI="#Large_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Peregrine_falcon"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#eats"/>
-            <Class IRI="#Animal"/>
-        </ObjectAllValuesFrom>
+            <Class IRI="#Small_animal"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Peregrine_falcon"/>
@@ -991,8 +1121,28 @@
         <Class IRI="#Mammal"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Plant"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#moves_by"/>
+            <ObjectComplementOf>
+                <Class IRI="#Locomotion"/>
+            </ObjectComplementOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Platypus"/>
+        <Class IRI="#Large_animal"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Platypus"/>
         <Class IRI="#Monotremes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Platypus"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Small_animal"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Platypus"/>
@@ -1039,6 +1189,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Rock_dove"/>
+        <Class IRI="#Small_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rock_dove"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#moves_by"/>
             <ObjectUnionOf>
@@ -1046,6 +1200,10 @@
                 <Class IRI="#Walking"/>
             </ObjectUnionOf>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Short-beaked_echidna"/>
+        <Class IRI="#Large_animal"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Short-beaked_echidna"/>
@@ -1076,21 +1234,25 @@
         <Class IRI="#Locomotion"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Small_animal"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Snake"/>
         <Class IRI="#Reptile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Snake"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Animal"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Snake"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#attacks_with"/>
             <Class IRI="#Fang"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Snake"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#eats"/>
-            <Class IRI="#Animal"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1156,14 +1318,24 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sugar_glider"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#eats"/>
-            <ObjectUnionOf>
-                <Class IRI="#Birds"/>
-                <Class IRI="#Lizard"/>
-                <Class IRI="#Plant"/>
-            </ObjectUnionOf>
-        </ObjectAllValuesFrom>
+        <Class IRI="#Small_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sugar_glider"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#eats"/>
+                <Class IRI="#Small_animal"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#eats"/>
+                <ObjectUnionOf>
+                    <Class IRI="#Birds"/>
+                    <Class IRI="#Lizard"/>
+                    <Class IRI="#Plant"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sugar_glider"/>
@@ -1208,23 +1380,30 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tasmanian_devil"/>
+        <Class IRI="#Large_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tasmanian_devil"/>
         <Class IRI="#Marsupials"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tasmanian_devil"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#eats"/>
             <ObjectUnionOf>
-                <Class IRI="#Animal"/>
                 <Class IRI="#Plant"/>
+                <Class IRI="#Small_animal"/>
             </ObjectUnionOf>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tasmanian_devil"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#moves_by"/>
-            <Class IRI="#Walking"/>
+            <ObjectUnionOf>
+                <Class IRI="#Swimming"/>
+                <Class IRI="#Walking"/>
+            </ObjectUnionOf>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1242,6 +1421,15 @@
             <DataProperty IRI="#hibernates"/>
             <DataOneOf>
                 <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tasmanian_devil"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_nocturnal"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
     </SubClassOf>
@@ -1283,6 +1471,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tawny_frogmouth"/>
+        <Class IRI="#Large_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tawny_frogmouth"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#moves_by"/>
             <ObjectUnionOf>
@@ -1320,14 +1512,25 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tiger_snake"/>
+        <Class IRI="#Large_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tiger_snake"/>
         <Class IRI="#Snake"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tiger_snake"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Small_animal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tiger_snake"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#lives_in"/>
             <Class IRI="#Near_water"/>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tiger_snake"/>
@@ -1376,10 +1579,14 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Wedge-tailed_eagle"/>
-        <ObjectAllValuesFrom>
+        <Class IRI="#Large_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wedge-tailed_eagle"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#eats"/>
-            <Class IRI="#Animal"/>
-        </ObjectAllValuesFrom>
+            <Class IRI="#Small_animal"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Wedge-tailed_eagle"/>
@@ -1409,14 +1616,24 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#White-lipped_snake"/>
+        <Class IRI="#Large_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#White-lipped_snake"/>
         <Class IRI="#Snake"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#White-lipped_snake"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#eats"/>
-            <Class IRI="#Skink"/>
-        </ObjectAllValuesFrom>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#eats"/>
+                <Class IRI="#Small_animal"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#eats"/>
+                <Class IRI="#Skink"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#White-lipped_snake"/>
@@ -1445,11 +1662,15 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Wild_boar"/>
+        <Class IRI="#Large_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wild_boar"/>
         <Class IRI="#Placentals"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Wild_boar"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#eats"/>
             <ObjectUnionOf>
                 <Class IRI="#Frog"/>
@@ -1457,7 +1678,7 @@
                 <Class IRI="#Plant"/>
                 <Class IRI="#Snake"/>
             </ObjectUnionOf>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Wild_boar"/>
@@ -1503,10 +1724,27 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Gould&apos;s_wattled_bat"/>
-        <ObjectAllValuesFrom>
+        <Class IRI="#Small_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gould&apos;s_wattled_bat"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#eats"/>
+                <Class IRI="#Insect"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#eats"/>
+                <Class IRI="#Small_animal"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gould&apos;s_wattled_bat"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#lives_in"/>
             <Class IRI="#Woodlands"/>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Gould&apos;s_wattled_bat"/>
@@ -1565,6 +1803,10 @@
         <Class IRI="#Plant"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Large_animal"/>
+        <Class IRI="#Small_animal"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Lizard"/>
         <Class IRI="#Snake"/>
     </DisjointClasses>
@@ -1573,11 +1815,26 @@
         <Class IRI="#Monotremes"/>
         <Class IRI="#Placentals"/>
     </DisjointClasses>
-    <DisjointUnion>
-        <Class IRI="#Omnivore"/>
-        <Class IRI="#Carnivore"/>
-        <Class IRI="#Herbivore"/>
-    </DisjointUnion>
+    <ClassAssertion>
+        <Class IRI="#Blotched_blue-tongued_lizard"/>
+        <NamedIndividual IRI="#Blochy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#White-lipped_snake"/>
+        <NamedIndividual IRI="#Danger_noodle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Goat"/>
+        <NamedIndividual IRI="#Jacqueline"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Platypus"/>
+        <NamedIndividual IRI="#Platy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Eastern_grey_kangaroo"/>
+        <NamedIndividual IRI="#kango"/>
+    </ClassAssertion>
     <EquivalentObjectProperties>
         <ObjectProperty IRI="#eats"/>
         <ObjectInverseOf>
@@ -1626,6 +1883,27 @@
         <ObjectProperty IRI="#eats"/>
         <ObjectProperty IRI="#is_eaten_by"/>
     </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#regulates_temperature_by"/>
+    </FunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#attacks_with"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#defends_with"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#lives_in"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#moves_by"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#predates_by"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#regulates_temperature_by"/>
+    </AsymmetricObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#part_of"/>
     </TransitiveObjectProperty>
@@ -1730,6 +2008,30 @@
         <DataProperty IRI="#lay_eggs"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#carry_young_in_pouch"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#conservation_status"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hibernates"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#is_endogenous"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#is_nocturnal"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#is_poisonous"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#is_venomous"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#lay_eggs"/>
+    </FunctionalDataProperty>
     <DataPropertyDomain>
         <DataProperty IRI="#carry_young_in_pouch"/>
         <Class IRI="#Animal"/>
