@@ -100,6 +100,9 @@
         <Class IRI="#Insect"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Jaw"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Large_animal"/>
     </Declaration>
     <Declaration>
@@ -326,16 +329,16 @@
         <Class IRI="#Herbivore"/>
         <ObjectIntersectionOf>
             <Class IRI="#Animal"/>
-            <ObjectAllValuesFrom>
+            <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#eats"/>
                 <ObjectUnionOf>
                     <Class IRI="#Plant"/>
-                    <ObjectAllValuesFrom>
+                    <ObjectSomeValuesFrom>
                         <ObjectProperty IRI="#part_of"/>
                         <Class IRI="#Plant"/>
-                    </ObjectAllValuesFrom>
+                    </ObjectSomeValuesFrom>
                 </ObjectUnionOf>
-            </ObjectAllValuesFrom>
+            </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -772,11 +775,25 @@
     <SubClassOf>
         <Class IRI="#Ferret"/>
         <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#attacks_with"/>
+            <Class IRI="#Jaw"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ferret"/>
+        <ObjectAllValuesFrom>
             <ObjectProperty IRI="#moves_by"/>
             <ObjectUnionOf>
                 <Class IRI="#Climbing"/>
                 <Class IRI="#Walking"/>
             </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ferret"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#predates_by"/>
+            <Class IRI="#Chase"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -915,6 +932,10 @@
         <Class IRI="#Animal"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Jaw"/>
+        <Class IRI="#Weapons"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Large_animal"/>
         <Class IRI="#Animal"/>
     </SubClassOf>
@@ -928,6 +949,13 @@
             <ObjectProperty IRI="#eats"/>
             <Class IRI="#Animal"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lizard"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#attacks_with"/>
+            <Class IRI="#Jaw"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Lizard"/>
@@ -1084,6 +1112,16 @@
     <SubClassOf>
         <Class IRI="#Peregrine_falcon"/>
         <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#attacks_with"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#Beak"/>
+                <Class IRI="#Claw"/>
+            </ObjectIntersectionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Peregrine_falcon"/>
+        <ObjectAllValuesFrom>
             <ObjectProperty IRI="#moves_by"/>
             <ObjectUnionOf>
                 <Class IRI="#Flying"/>
@@ -1119,15 +1157,6 @@
     <SubClassOf>
         <Class IRI="#Placentals"/>
         <Class IRI="#Mammal"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Plant"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#moves_by"/>
-            <ObjectComplementOf>
-                <Class IRI="#Locomotion"/>
-            </ObjectComplementOf>
-        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Platypus"/>
@@ -1476,6 +1505,16 @@
     <SubClassOf>
         <Class IRI="#Tawny_frogmouth"/>
         <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#attacks_with"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#Beak"/>
+                <Class IRI="#Claw"/>
+            </ObjectIntersectionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tawny_frogmouth"/>
+        <ObjectAllValuesFrom>
             <ObjectProperty IRI="#moves_by"/>
             <ObjectUnionOf>
                 <Class IRI="#Flying"/>
@@ -1587,6 +1626,16 @@
             <ObjectProperty IRI="#eats"/>
             <Class IRI="#Small_animal"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wedge-tailed_eagle"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#attacks_with"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#Beak"/>
+                <Class IRI="#Claw"/>
+            </ObjectIntersectionOf>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Wedge-tailed_eagle"/>
