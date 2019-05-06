@@ -1,0 +1,28 @@
+--------------------------------------------------
+-                    SPARQL
+--------------------------------------------------
+
+PREFIX tas: <http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#>
+PREFIX rdf: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?a ?x ?y
+WHERE
+{
+ ?a rdf:subClassOf tas:Small_animal .
+ ?x rdf:subClassOf tas:Mammal .
+ ?a rdf:subClassOf ?x .
+}
+
+=> returns small mammals
+
+--------------------------------------------------
+-               Manchester syntax
+--------------------------------------------------
+
+eats some Animal and Toxic and Endangered
+eats some Animal and moves_by only (Flying or Walking)
+Birds and moves_by only Walking
+lives_in some Woodlands
+Endangered and Vivipare
+Mammal and lay_eggs only {true}
+(Mammal) and (Large_animal) and (is_endogenous only {true}) and (lay_eggs only {false})
