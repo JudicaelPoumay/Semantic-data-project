@@ -539,6 +539,12 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Blotched_blue-tongued_lizard"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blotched_blue-tongued_lizard"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#lives_in"/>
             <ObjectUnionOf>
@@ -606,6 +612,12 @@
     <SubClassOf>
         <Class IRI="#Common_wombat"/>
         <Class IRI="#Marsupials"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Common_wombat"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Common_wombat"/>
@@ -678,6 +690,12 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Eastern_grey_kangaroo"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_grey_kangaroo"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#eats"/>
             <Class IRI="#Plant"/>
@@ -720,12 +738,27 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Eastern_grey_kangaroo"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Eastern_ground_parrot"/>
         <Class IRI="#Birds"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Eastern_ground_parrot"/>
         <Class IRI="#Small_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eastern_ground_parrot"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Eastern_ground_parrot"/>
@@ -754,6 +787,15 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Eastern_ground_parrot"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Fang"/>
         <Class IRI="#Weapons"/>
     </SubClassOf>
@@ -764,6 +806,12 @@
     <SubClassOf>
         <Class IRI="#Ferret"/>
         <Class IRI="#Small_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ferret"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ferret"/>
@@ -800,6 +848,15 @@
         <Class IRI="#Ferret"/>
         <DataAllValuesFrom>
             <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ferret"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
             <DataOneOf>
                 <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
             </DataOneOf>
@@ -852,6 +909,12 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Goat"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Goat"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#moves_by"/>
             <ObjectUnionOf>
@@ -864,6 +927,15 @@
         <Class IRI="#Goat"/>
         <DataAllValuesFrom>
             <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Goat"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
             <DataOneOf>
                 <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
             </DataOneOf>
@@ -1015,6 +1087,15 @@
     <SubClassOf>
         <Class IRI="#Lowland_copperhead"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lowland_copperhead"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#is_venomous"/>
             <DataOneOf>
                 <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
@@ -1047,6 +1128,12 @@
     <SubClassOf>
         <Class IRI="#Mountain_dragon"/>
         <Class IRI="#Small_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mountain_dragon"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mountain_dragon"/>
@@ -1101,6 +1188,12 @@
     <SubClassOf>
         <Class IRI="#Peregrine_falcon"/>
         <Class IRI="#Large_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Peregrine_falcon"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Peregrine_falcon"/>
@@ -1195,6 +1288,15 @@
     <SubClassOf>
         <Class IRI="#Platypus"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Platypus"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#is_poisonous"/>
             <DataOneOf>
                 <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
@@ -1222,6 +1324,19 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Rock_dove"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rock_dove"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#lives_in"/>
+            <Class IRI="#Coastal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rock_dove"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#moves_by"/>
             <ObjectUnionOf>
@@ -1231,12 +1346,36 @@
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Rock_dove"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hibernates"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rock_dove"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Short-beaked_echidna"/>
         <Class IRI="#Large_animal"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Short-beaked_echidna"/>
         <Class IRI="#Monotremes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Short-beaked_echidna"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Short-beaked_echidna"/>
@@ -1251,6 +1390,15 @@
             <DataProperty IRI="#hibernates"/>
             <DataOneOf>
                 <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Short-beaked_echidna"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
     </SubClassOf>
@@ -1368,6 +1516,19 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sugar_glider"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sugar_glider"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#lives_in"/>
+            <Class IRI="#Woodlands"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sugar_glider"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#moves_by"/>
             <ObjectUnionOf>
@@ -1404,6 +1565,15 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Sugar_glider"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_nocturnal"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Swimming"/>
         <Class IRI="#Locomotion"/>
     </SubClassOf>
@@ -1414,6 +1584,12 @@
     <SubClassOf>
         <Class IRI="#Tasmanian_devil"/>
         <Class IRI="#Marsupials"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tasmanian_devil"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tasmanian_devil"/>
@@ -1450,6 +1626,15 @@
             <DataProperty IRI="#hibernates"/>
             <DataOneOf>
                 <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tasmanian_devil"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#is_endogenous"/>
+            <DataOneOf>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
     </SubClassOf>
@@ -1501,6 +1686,12 @@
     <SubClassOf>
         <Class IRI="#Tawny_frogmouth"/>
         <Class IRI="#Large_animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tawny_frogmouth"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tawny_frogmouth"/>
@@ -1622,6 +1813,12 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Wedge-tailed_eagle"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wedge-tailed_eagle"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#eats"/>
             <Class IRI="#Small_animal"/>
@@ -1719,6 +1916,12 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Wild_boar"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wild_boar"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#eats"/>
             <ObjectUnionOf>
@@ -1787,6 +1990,12 @@
                 <Class IRI="#Small_animal"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gould&apos;s_wattled_bat"/>
+        <ObjectComplementOf>
+            <Class IRI="#Toxic"/>
+        </ObjectComplementOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Gould&apos;s_wattled_bat"/>
