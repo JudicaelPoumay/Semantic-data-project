@@ -1,0 +1,1833 @@
+@prefix : <http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania> .
+
+<http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#attacks_with
+:attacks_with rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdf:type owl:AsymmetricProperty ;
+              rdfs:domain :Animal ;
+              rdfs:range :Weapons .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#defends_with
+:defends_with rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdf:type owl:AsymmetricProperty ;
+              rdfs:domain :Animal ;
+              rdfs:range :Weapons .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#eats
+:eats rdf:type owl:ObjectProperty ;
+      owl:equivalentProperty [ owl:inverseOf :is_eaten_by
+                             ] ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf :is_eaten_by ;
+      rdfs:domain :Animal ;
+      rdfs:range [ rdf:type owl:Class ;
+                   owl:unionOf ( :Animal
+                                 :Plant
+                               )
+                 ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#is_eaten_by
+:is_eaten_by rdf:type owl:ObjectProperty ;
+             owl:equivalentProperty [ owl:inverseOf :eats
+                                    ] ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Animal
+                                         :Plant
+                                       )
+                         ] ;
+             rdfs:range :Animal .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#lives_in
+:lives_in rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdf:type owl:AsymmetricProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Animal
+                                      :Plant
+                                    )
+                      ] ;
+          rdfs:range :Environement .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#moves_by
+:moves_by rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdf:type owl:AsymmetricProperty ;
+          rdfs:domain :Animal ;
+          rdfs:range :Locomotion .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#part_of
+:part_of rdf:type owl:ObjectProperty ,
+                  owl:TransitiveProperty ;
+         rdfs:domain owl:Thing ;
+         rdfs:range owl:Thing .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#predates_by
+:predates_by rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdf:type owl:AsymmetricProperty ;
+             rdfs:domain :Animal ;
+             rdfs:range :Predation_strategy .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#regulates_temperature_by
+:regulates_temperature_by rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdf:type owl:FunctionalProperty ,
+                                   owl:AsymmetricProperty ;
+                          rdfs:domain :Animal ;
+                          rdfs:range :Thermoregulation .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#carry_young_in_pouch
+:carry_young_in_pouch rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain :Animal ;
+                      rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#conservation_status
+:conservation_status rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( :Animal
+                                                 :Plant
+                                               )
+                                 ] ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#hibernates
+:hibernates rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Animal ;
+            rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#is_endogenous
+:is_endogenous rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :Animal
+                                           :Plant
+                                         )
+                           ] ;
+               rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#is_nocturnal
+:is_nocturnal rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain :Animal ;
+              rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#is_poisonous
+:is_poisonous rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :Animal
+                                          :Plant
+                                        )
+                          ] ;
+              rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#is_venomous
+:is_venomous rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Animal
+                                         :Plant
+                                       )
+                         ] ;
+             rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#lay_eggs
+:lay_eggs rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdf:type owl:FunctionalProperty ;
+          rdfs:domain :Animal ;
+          rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Ambush
+:Ambush rdf:type owl:Class ;
+        rdfs:subClassOf :Predation_strategy .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Amphibians
+:Amphibians rdf:type owl:Class ;
+            rdfs:subClassOf :Animal ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :lives_in ;
+                              owl:someValuesFrom [ rdf:type owl:Class ;
+                                                   owl:unionOf ( :Near_water
+                                                                 :Water
+                                                               )
+                                                 ]
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :regulates_temperature_by ;
+                              owl:allValuesFrom :Cold-blooded
+                            ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Animal
+:Animal rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :eats ;
+                          owl:someValuesFrom [ rdf:type owl:Class ;
+                                               owl:unionOf ( :Animal
+                                                             :Plant
+                                                           )
+                                             ]
+                        ] ;
+        owl:disjointWith :Plant .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Bat
+:Bat rdf:type owl:Class ;
+     rdfs:subClassOf :Mammal .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Beak
+:Beak rdf:type owl:Class ;
+      rdfs:subClassOf :Weapons .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Birds
+:Birds rdf:type owl:Class ;
+       rdfs:subClassOf :Animal ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :attacks_with ;
+                         owl:someValuesFrom [ rdf:type owl:Class ;
+                                              owl:unionOf ( :Beak
+                                                            :Claw
+                                                          )
+                                            ]
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :regulates_temperature_by ;
+                         owl:allValuesFrom :Warm-blooded
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :carry_young_in_pouch ;
+                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                             owl:oneOf [ rdf:type rdf:List ;
+                                                         rdf:first "false"^^xsd:boolean ;
+                                                         rdf:rest rdf:nil
+                                                       ]
+                                           ]
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hibernates ;
+                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                             owl:oneOf [ rdf:type rdf:List ;
+                                                         rdf:first "false"^^xsd:boolean ;
+                                                         rdf:rest rdf:nil
+                                                       ]
+                                           ]
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :lay_eggs ;
+                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                             owl:oneOf [ rdf:type rdf:List ;
+                                                         rdf:first "true"^^xsd:boolean ;
+                                                         rdf:rest rdf:nil
+                                                       ]
+                                           ]
+                       ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Blotched_blue-tongued_lizard
+:Blotched_blue-tongued_lizard rdf:type owl:Class ;
+                              rdfs:subClassOf :Skink ,
+                                              :Small_animal ,
+                                              [ rdf:type owl:Class ;
+                                                owl:complementOf :Toxic
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :lives_in ;
+                                                owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                     owl:unionOf ( :Heaths
+                                                                                   :Woodlands
+                                                                                 )
+                                                                   ]
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :moves_by ;
+                                                owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                    owl:unionOf ( :Climbing
+                                                                                  :Walking
+                                                                                )
+                                                                  ]
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :is_endogenous ;
+                                                owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                    owl:oneOf [ rdf:type rdf:List ;
+                                                                                rdf:first "true"^^xsd:boolean ;
+                                                                                rdf:rest rdf:nil
+                                                                              ]
+                                                                  ]
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :lay_eggs ;
+                                                owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                    owl:oneOf [ rdf:type rdf:List ;
+                                                                                rdf:first "false"^^xsd:boolean ;
+                                                                                rdf:rest rdf:nil
+                                                                              ]
+                                                                  ]
+                                              ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Carnivore
+:Carnivore rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :Animal
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :eats ;
+                                                        owl:someValuesFrom :Animal
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :Animal .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Chase
+:Chase rdf:type owl:Class ;
+       rdfs:subClassOf :Predation_strategy .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Claw
+:Claw rdf:type owl:Class ;
+      rdfs:subClassOf :Weapons .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Climbing
+:Climbing rdf:type owl:Class ;
+          rdfs:subClassOf :Locomotion .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Coastal
+:Coastal rdf:type owl:Class ;
+         rdfs:subClassOf :Environement .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Cold-blooded
+:Cold-blooded rdf:type owl:Class ;
+              rdfs:subClassOf :Thermoregulation .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Common_wombat
+:Common_wombat rdf:type owl:Class ;
+               rdfs:subClassOf :Large_animal ,
+                               :Marsupials ,
+                               [ rdf:type owl:Class ;
+                                 owl:complementOf :Toxic
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :eats ;
+                                 owl:someValuesFrom :Plant
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :lives_in ;
+                                 owl:someValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( :Coastal
+                                                                    :Grassland
+                                                                    :Woodlands
+                                                                  )
+                                                    ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :moves_by ;
+                                 owl:allValuesFrom :Walking
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :conservation_status ;
+                                 owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                     owl:oneOf [ rdf:type rdf:List ;
+                                                                 rdf:first "LC" ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                   ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hibernates ;
+                                 owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                     owl:oneOf [ rdf:type rdf:List ;
+                                                                 rdf:first "false"^^xsd:boolean ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                   ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :is_endogenous ;
+                                 owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                     owl:oneOf [ rdf:type rdf:List ;
+                                                                 rdf:first "true"^^xsd:boolean ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                   ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :is_nocturnal ;
+                                 owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                     owl:oneOf [ rdf:type rdf:List ;
+                                                                 rdf:first "true"^^xsd:boolean ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                   ]
+                               ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Eastern_grey_kangaroo
+:Eastern_grey_kangaroo rdf:type owl:Class ;
+                       rdfs:subClassOf :Large_animal ,
+                                       :Marsupials ,
+                                       [ rdf:type owl:Class ;
+                                         owl:complementOf :Toxic
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :eats ;
+                                         owl:someValuesFrom :Plant
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :lives_in ;
+                                         owl:someValuesFrom [ rdf:type owl:Class ;
+                                                              owl:unionOf ( :Coastal
+                                                                            :Grassland
+                                                                            :Woodlands
+                                                                          )
+                                                            ]
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :moves_by ;
+                                         owl:allValuesFrom :Walking
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :conservation_status ;
+                                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                             owl:oneOf [ rdf:type rdf:List ;
+                                                                         rdf:first "LC" ;
+                                                                         rdf:rest rdf:nil
+                                                                       ]
+                                                           ]
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hibernates ;
+                                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                             owl:oneOf [ rdf:type rdf:List ;
+                                                                         rdf:first "false"^^xsd:boolean ;
+                                                                         rdf:rest rdf:nil
+                                                                       ]
+                                                           ]
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :is_endogenous ;
+                                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                             owl:oneOf [ rdf:type rdf:List ;
+                                                                         rdf:first "true"^^xsd:boolean ;
+                                                                         rdf:rest rdf:nil
+                                                                       ]
+                                                           ]
+                                       ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Eastern_ground_parrot
+:Eastern_ground_parrot rdf:type owl:Class ;
+                       rdfs:subClassOf :Birds ,
+                                       :Small_animal ,
+                                       [ rdf:type owl:Class ;
+                                         owl:complementOf :Toxic
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :lives_in ;
+                                         owl:allValuesFrom [ rdf:type owl:Class ;
+                                                             owl:unionOf ( :Coastal
+                                                                           :Grassland
+                                                                         )
+                                                           ]
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :moves_by ;
+                                         owl:allValuesFrom :Walking
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :conservation_status ;
+                                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                             owl:oneOf [ rdf:type rdf:List ;
+                                                                         rdf:first "LC" ;
+                                                                         rdf:rest rdf:nil
+                                                                       ]
+                                                           ]
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :is_endogenous ;
+                                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                             owl:oneOf [ rdf:type rdf:List ;
+                                                                         rdf:first "true"^^xsd:boolean ;
+                                                                         rdf:rest rdf:nil
+                                                                       ]
+                                                           ]
+                                       ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Endangered
+:Endangered rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :conservation_status ;
+                                  owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                      owl:oneOf [ rdf:type rdf:List ;
+                                                                  rdf:first "CR" ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first "EN" ;
+                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                        rdf:first "EW" ;
+                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                   rdf:first "VU" ;
+                                                                                                   rdf:rest rdf:nil
+                                                                                                 ]
+                                                                                      ]
+                                                                           ]
+                                                                ]
+                                                    ]
+                                ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Environement
+:Environement rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Fang
+:Fang rdf:type owl:Class ;
+      rdfs:subClassOf :Weapons .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Ferret
+:Ferret rdf:type owl:Class ;
+        rdfs:subClassOf :Placentals ,
+                        :Small_animal ,
+                        [ rdf:type owl:Class ;
+                          owl:complementOf :Toxic
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :eats ;
+                          owl:someValuesFrom :Small_animal
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :attacks_with ;
+                          owl:allValuesFrom :Jaw
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :moves_by ;
+                          owl:allValuesFrom [ rdf:type owl:Class ;
+                                              owl:unionOf ( :Climbing
+                                                            :Walking
+                                                          )
+                                            ]
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :predates_by ;
+                          owl:allValuesFrom :Chase
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hibernates ;
+                          owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                              owl:oneOf [ rdf:type rdf:List ;
+                                                          rdf:first "false"^^xsd:boolean ;
+                                                          rdf:rest rdf:nil
+                                                        ]
+                                            ]
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :is_endogenous ;
+                          owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                              owl:oneOf [ rdf:type rdf:List ;
+                                                          rdf:first "false"^^xsd:boolean ;
+                                                          rdf:rest rdf:nil
+                                                        ]
+                                            ]
+                        ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Flying
+:Flying rdf:type owl:Class ;
+        rdfs:subClassOf :Locomotion .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Frog
+:Frog rdf:type owl:Class ;
+      rdfs:subClassOf :Amphibians ,
+                      :Small_animal ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :eats ;
+                        owl:someValuesFrom :Insect
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :carry_young_in_pouch ;
+                        owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                            owl:oneOf [ rdf:type rdf:List ;
+                                                        rdf:first "false"^^xsd:boolean ;
+                                                        rdf:rest rdf:nil
+                                                      ]
+                                          ]
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :is_poisonous ;
+                        owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                            owl:oneOf [ rdf:type rdf:List ;
+                                                        rdf:first "true"^^xsd:boolean ;
+                                                        rdf:rest rdf:nil
+                                                      ]
+                                          ]
+                      ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Goat
+:Goat rdf:type owl:Class ;
+      rdfs:subClassOf :Large_animal ,
+                      :Placentals ,
+                      [ rdf:type owl:Class ;
+                        owl:complementOf :Toxic
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :moves_by ;
+                        owl:allValuesFrom [ rdf:type owl:Class ;
+                                            owl:unionOf ( :Climbing
+                                                          :Walking
+                                                        )
+                                          ]
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hibernates ;
+                        owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                            owl:oneOf [ rdf:type rdf:List ;
+                                                        rdf:first "false"^^xsd:boolean ;
+                                                        rdf:rest rdf:nil
+                                                      ]
+                                          ]
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :is_endogenous ;
+                        owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                            owl:oneOf [ rdf:type rdf:List ;
+                                                        rdf:first "false"^^xsd:boolean ;
+                                                        rdf:rest rdf:nil
+                                                      ]
+                                          ]
+                      ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Grassland
+:Grassland rdf:type owl:Class ;
+           rdfs:subClassOf :Environement .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Growling_grass_frog
+:Growling_grass_frog rdf:type owl:Class ;
+                     rdfs:subClassOf :Frog ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :moves_by ;
+                                       owl:allValuesFrom [ rdf:type owl:Class ;
+                                                           owl:unionOf ( :Climbing
+                                                                         :Swimming
+                                                                         :Walking
+                                                                       )
+                                                         ]
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :conservation_status ;
+                                       owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                           owl:oneOf [ rdf:type rdf:List ;
+                                                                       rdf:first "EN" ;
+                                                                       rdf:rest rdf:nil
+                                                                     ]
+                                                         ]
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :is_endogenous ;
+                                       owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                           owl:oneOf [ rdf:type rdf:List ;
+                                                                       rdf:first "true"^^xsd:boolean ;
+                                                                       rdf:rest rdf:nil
+                                                                     ]
+                                                         ]
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :is_nocturnal ;
+                                       owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                           owl:oneOf [ rdf:type rdf:List ;
+                                                                       rdf:first "false"^^xsd:boolean ;
+                                                                       rdf:rest rdf:nil
+                                                                     ]
+                                                         ]
+                                     ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Heaths
+:Heaths rdf:type owl:Class ;
+        rdfs:subClassOf :Environement .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Herbivore
+:Herbivore rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :Animal
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :eats ;
+                                                        owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                             owl:unionOf ( :Plant
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty :part_of ;
+                                                                                             owl:someValuesFrom :Plant
+                                                                                           ]
+                                                                                         )
+                                                                           ]
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :Animal .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Horn
+:Horn rdf:type owl:Class ;
+      rdfs:subClassOf :Weapons .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Insect
+:Insect rdf:type owl:Class ;
+        rdfs:subClassOf :Animal .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Jaw
+:Jaw rdf:type owl:Class ;
+     rdfs:subClassOf :Weapons .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Large_animal
+:Large_animal rdf:type owl:Class ;
+              rdfs:subClassOf :Animal ;
+              owl:disjointWith :Small_animal .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Lizard
+:Lizard rdf:type owl:Class ;
+        rdfs:subClassOf :Reptile ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :eats ;
+                          owl:someValuesFrom :Animal
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :attacks_with ;
+                          owl:allValuesFrom :Jaw
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :predates_by ;
+                          owl:allValuesFrom :Ambush
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :carry_young_in_pouch ;
+                          owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                              owl:oneOf [ rdf:type rdf:List ;
+                                                          rdf:first "false"^^xsd:boolean ;
+                                                          rdf:rest rdf:nil
+                                                        ]
+                                            ]
+                        ] ;
+        owl:disjointWith :Snake .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Locomotion
+:Locomotion rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Lowland_copperhead
+:Lowland_copperhead rdf:type owl:Class ;
+                    rdfs:subClassOf :Large_animal ,
+                                    :Snake ,
+                                    [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :eats ;
+                                                             owl:someValuesFrom :Small_animal
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :eats ;
+                                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                  owl:unionOf ( :Frog
+                                                                                                :Lizard
+                                                                                                :Snake
+                                                                                              )
+                                                                                ]
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :lives_in ;
+                                      owl:someValuesFrom :Near_water
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :moves_by ;
+                                      owl:allValuesFrom :Slithering
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :is_endogenous ;
+                                      owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                          owl:oneOf [ rdf:type rdf:List ;
+                                                                      rdf:first "true"^^xsd:boolean ;
+                                                                      rdf:rest rdf:nil
+                                                                    ]
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :is_venomous ;
+                                      owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                          owl:oneOf [ rdf:type rdf:List ;
+                                                                      rdf:first "true"^^xsd:boolean ;
+                                                                      rdf:rest rdf:nil
+                                                                    ]
+                                                        ]
+                                    ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Mammal
+:Mammal rdf:type owl:Class ;
+        rdfs:subClassOf :Animal ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :regulates_temperature_by ;
+                          owl:allValuesFrom :Warm-blooded
+                        ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Marsupials
+:Marsupials rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :Mammal
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :carry_young_in_pouch ;
+                                                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                             owl:oneOf [ rdf:type rdf:List ;
+                                                                                         rdf:first "true"^^xsd:boolean ;
+                                                                                         rdf:rest rdf:nil
+                                                                                       ]
+                                                                           ]
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf :Mammal ;
+            rdfs:comment "The Monotreme are partly distinguishable from other mammals in that most of the young are carried in a pouch" .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Monotremes
+:Monotremes rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :Mammal
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :lay_eggs ;
+                                                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                             owl:oneOf [ rdf:type rdf:List ;
+                                                                                         rdf:first "true"^^xsd:boolean ;
+                                                                                         rdf:rest rdf:nil
+                                                                                       ]
+                                                                           ]
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf :Mammal ;
+            rdfs:comment "The Monotreme are partly distinguishable from other mammals in that they lay eggs" .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Mountain_dragon
+:Mountain_dragon rdf:type owl:Class ;
+                 rdfs:subClassOf :Lizard ,
+                                 :Small_animal ,
+                                 [ rdf:type owl:Class ;
+                                   owl:complementOf :Toxic
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :lives_in ;
+                                   owl:someValuesFrom [ rdf:type owl:Class ;
+                                                        owl:unionOf ( :Heaths
+                                                                      :Woodlands
+                                                                    )
+                                                      ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :moves_by ;
+                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( :Climbing
+                                                                     :Walking
+                                                                   )
+                                                     ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :conservation_status ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first "LC" ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :is_endogenous ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first "true"^^xsd:boolean ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Near_water
+:Near_water rdf:type owl:Class ;
+            rdfs:subClassOf :Environement .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Omnivore
+:Omnivore rdf:type owl:Class ;
+          rdfs:subClassOf :Animal .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Ovipare
+:Ovipare rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :Animal
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :lay_eggs ;
+                                                      owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                          owl:oneOf [ rdf:type rdf:List ;
+                                                                                      rdf:first "true"^^xsd:boolean ;
+                                                                                      rdf:rest rdf:nil
+                                                                                    ]
+                                                                        ]
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Peregrine_falcon
+:Peregrine_falcon rdf:type owl:Class ;
+                  rdfs:subClassOf :Birds ,
+                                  :Large_animal ,
+                                  [ rdf:type owl:Class ;
+                                    owl:complementOf :Toxic
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :eats ;
+                                    owl:someValuesFrom :Small_animal
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :attacks_with ;
+                                    owl:allValuesFrom [ owl:intersectionOf ( :Beak
+                                                                             :Claw
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :moves_by ;
+                                    owl:allValuesFrom [ rdf:type owl:Class ;
+                                                        owl:unionOf ( :Flying
+                                                                      :Walking
+                                                                    )
+                                                      ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :predates_by ;
+                                    owl:allValuesFrom :Chase
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :conservation_status ;
+                                    owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                        owl:oneOf [ rdf:type rdf:List ;
+                                                                    rdf:first "LC" ;
+                                                                    rdf:rest rdf:nil
+                                                                  ]
+                                                      ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :is_endogenous ;
+                                    owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                        owl:oneOf [ rdf:type rdf:List ;
+                                                                    rdf:first "false"^^xsd:boolean ;
+                                                                    rdf:rest rdf:nil
+                                                                  ]
+                                                      ]
+                                  ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Placentals
+:Placentals rdf:type owl:Class ;
+            rdfs:subClassOf :Mammal ;
+            rdfs:comment "The Placentals are partly distinguishable from other mammals in that the fetus is carried in the uterus of its mother to a relatively late stage of development." .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Plant
+:Plant rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Platypus
+:Platypus rdf:type owl:Class ;
+          rdfs:subClassOf :Large_animal ,
+                          :Monotremes ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :eats ;
+                            owl:someValuesFrom :Small_animal
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :moves_by ;
+                            owl:allValuesFrom [ rdf:type owl:Class ;
+                                                owl:unionOf ( :Swimming
+                                                              :Walking
+                                                            )
+                                              ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hibernates ;
+                            owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                owl:oneOf [ rdf:type rdf:List ;
+                                                            rdf:first "false"^^xsd:boolean ;
+                                                            rdf:rest rdf:nil
+                                                          ]
+                                              ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :is_endogenous ;
+                            owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                owl:oneOf [ rdf:type rdf:List ;
+                                                            rdf:first "true"^^xsd:boolean ;
+                                                            rdf:rest rdf:nil
+                                                          ]
+                                              ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :is_poisonous ;
+                            owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                owl:oneOf [ rdf:type rdf:List ;
+                                                            rdf:first "true"^^xsd:boolean ;
+                                                            rdf:rest rdf:nil
+                                                          ]
+                                              ]
+                          ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Predation_strategy
+:Predation_strategy rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Predator
+:Predator rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :Animal
+                                                     [ rdf:type owl:Class ;
+                                                       owl:complementOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty :is_eaten_by ;
+                                                                          owl:someValuesFrom :Animal
+                                                                        ]
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :eats ;
+                                                       owl:someValuesFrom :Animal
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Prey
+:Prey rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf ( :Animal
+                                                 [ rdf:type owl:Class ;
+                                                   owl:complementOf [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :eats ;
+                                                                      owl:someValuesFrom :Animal
+                                                                    ]
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :is_eaten_by ;
+                                                   owl:someValuesFrom :Animal
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Reptile
+:Reptile rdf:type owl:Class ;
+         rdfs:subClassOf :Animal ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :regulates_temperature_by ;
+                           owl:allValuesFrom :Cold-blooded
+                         ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Rock_dove
+:Rock_dove rdf:type owl:Class ;
+           rdfs:subClassOf :Birds ,
+                           :Small_animal ,
+                           [ rdf:type owl:Class ;
+                             owl:complementOf :Toxic
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :lives_in ;
+                             owl:someValuesFrom :Coastal
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :moves_by ;
+                             owl:allValuesFrom [ rdf:type owl:Class ;
+                                                 owl:unionOf ( :Flying
+                                                               :Walking
+                                                             )
+                                               ]
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hibernates ;
+                             owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                 owl:oneOf [ rdf:type rdf:List ;
+                                                             rdf:first "false"^^xsd:boolean ;
+                                                             rdf:rest rdf:nil
+                                                           ]
+                                               ]
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :is_endogenous ;
+                             owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                 owl:oneOf [ rdf:type rdf:List ;
+                                                             rdf:first "false"^^xsd:boolean ;
+                                                             rdf:rest rdf:nil
+                                                           ]
+                                               ]
+                           ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Short-beaked_echidna
+:Short-beaked_echidna rdf:type owl:Class ;
+                      rdfs:subClassOf :Large_animal ,
+                                      :Monotremes ,
+                                      [ rdf:type owl:Class ;
+                                        owl:complementOf :Toxic
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :moves_by ;
+                                        owl:allValuesFrom :Walking
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hibernates ;
+                                        owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                            owl:oneOf [ rdf:type rdf:List ;
+                                                                        rdf:first "false"^^xsd:boolean ;
+                                                                        rdf:rest rdf:nil
+                                                                      ]
+                                                          ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :is_endogenous ;
+                                        owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                            owl:oneOf [ rdf:type rdf:List ;
+                                                                        rdf:first "true"^^xsd:boolean ;
+                                                                        rdf:rest rdf:nil
+                                                                      ]
+                                                          ]
+                                      ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Skink
+:Skink rdf:type owl:Class ;
+       rdfs:subClassOf :Lizard .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Slithering
+:Slithering rdf:type owl:Class ;
+            rdfs:subClassOf :Locomotion .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Small_animal
+:Small_animal rdf:type owl:Class ;
+              rdfs:subClassOf :Animal .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Snake
+:Snake rdf:type owl:Class ;
+       rdfs:subClassOf :Reptile ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :eats ;
+                         owl:someValuesFrom :Animal
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :attacks_with ;
+                         owl:allValuesFrom :Fang
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :predates_by ;
+                         owl:allValuesFrom :Ambush
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :carry_young_in_pouch ;
+                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                             owl:oneOf [ rdf:type rdf:List ;
+                                                         rdf:first "false"^^xsd:boolean ;
+                                                         rdf:rest rdf:nil
+                                                       ]
+                                           ]
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :lay_eggs ;
+                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                             owl:oneOf [ rdf:type rdf:List ;
+                                                         rdf:first "true"^^xsd:boolean ;
+                                                         rdf:rest rdf:nil
+                                                       ]
+                                           ]
+                       ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Southern_brown_tree_frog
+:Southern_brown_tree_frog rdf:type owl:Class ;
+                          rdfs:subClassOf :Frog ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :moves_by ;
+                                            owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                owl:unionOf ( :Swimming
+                                                                              :Walking
+                                                                            )
+                                                              ]
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :conservation_status ;
+                                            owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                owl:oneOf [ rdf:type rdf:List ;
+                                                                            rdf:first "LC" ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                              ]
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :is_endogenous ;
+                                            owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                owl:oneOf [ rdf:type rdf:List ;
+                                                                            rdf:first "true"^^xsd:boolean ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                              ]
+                                          ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Sugar_glider
+:Sugar_glider rdf:type owl:Class ;
+              rdfs:subClassOf :Marsupials ,
+                              :Small_animal ,
+                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :eats ;
+                                                       owl:someValuesFrom :Small_animal
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :eats ;
+                                                       owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                            owl:unionOf ( :Birds
+                                                                                          :Lizard
+                                                                                          :Plant
+                                                                                        )
+                                                                          ]
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ,
+                              [ rdf:type owl:Class ;
+                                owl:complementOf :Toxic
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :lives_in ;
+                                owl:someValuesFrom :Woodlands
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :moves_by ;
+                                owl:allValuesFrom [ rdf:type owl:Class ;
+                                                    owl:unionOf ( :Climbing
+                                                                  :Walking
+                                                                )
+                                                  ]
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :conservation_status ;
+                                owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                    owl:oneOf [ rdf:type rdf:List ;
+                                                                rdf:first "LC" ;
+                                                                rdf:rest rdf:nil
+                                                              ]
+                                                  ]
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hibernates ;
+                                owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                    owl:oneOf [ rdf:type rdf:List ;
+                                                                rdf:first "false"^^xsd:boolean ;
+                                                                rdf:rest rdf:nil
+                                                              ]
+                                                  ]
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :is_endogenous ;
+                                owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                    owl:oneOf [ rdf:type rdf:List ;
+                                                                rdf:first "true"^^xsd:boolean ;
+                                                                rdf:rest rdf:nil
+                                                              ]
+                                                  ]
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :is_nocturnal ;
+                                owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                    owl:oneOf [ rdf:type rdf:List ;
+                                                                rdf:first "true"^^xsd:boolean ;
+                                                                rdf:rest rdf:nil
+                                                              ]
+                                                  ]
+                              ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Swimming
+:Swimming rdf:type owl:Class ;
+          rdfs:subClassOf :Locomotion .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Tasmanian_devil
+:Tasmanian_devil rdf:type owl:Class ;
+                 rdfs:subClassOf :Large_animal ,
+                                 :Marsupials ,
+                                 [ rdf:type owl:Class ;
+                                   owl:complementOf :Toxic
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :eats ;
+                                   owl:someValuesFrom [ rdf:type owl:Class ;
+                                                        owl:unionOf ( :Plant
+                                                                      :Small_animal
+                                                                    )
+                                                      ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :moves_by ;
+                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( :Swimming
+                                                                     :Walking
+                                                                   )
+                                                     ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :conservation_status ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first "EN" ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hibernates ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first "false"^^xsd:boolean ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :is_endogenous ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first "true"^^xsd:boolean ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :is_nocturnal ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first "true"^^xsd:boolean ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Tasmanian_froglet
+:Tasmanian_froglet rdf:type owl:Class ;
+                   rdfs:subClassOf :Frog ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :moves_by ;
+                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                         owl:unionOf ( :Swimming
+                                                                       :Walking
+                                                                     )
+                                                       ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :conservation_status ;
+                                     owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                         owl:oneOf [ rdf:type rdf:List ;
+                                                                     rdf:first "LC" ;
+                                                                     rdf:rest rdf:nil
+                                                                   ]
+                                                       ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :is_endogenous ;
+                                     owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                         owl:oneOf [ rdf:type rdf:List ;
+                                                                     rdf:first "true"^^xsd:boolean ;
+                                                                     rdf:rest rdf:nil
+                                                                   ]
+                                                       ]
+                                   ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Tawny_frogmouth
+:Tawny_frogmouth rdf:type owl:Class ;
+                 rdfs:subClassOf :Birds ,
+                                 :Large_animal ,
+                                 [ rdf:type owl:Class ;
+                                   owl:complementOf :Toxic
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :attacks_with ;
+                                   owl:allValuesFrom [ owl:intersectionOf ( :Beak
+                                                                            :Claw
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :moves_by ;
+                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( :Flying
+                                                                     :Walking
+                                                                   )
+                                                     ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :conservation_status ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first "LC" ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :is_endogenous ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first "true"^^xsd:boolean ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :is_nocturnal ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first "true"^^xsd:boolean ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Thermoregulation
+:Thermoregulation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Tiger_snake
+:Tiger_snake rdf:type owl:Class ;
+             rdfs:subClassOf :Large_animal ,
+                             :Snake ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :eats ;
+                               owl:someValuesFrom :Small_animal
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :lives_in ;
+                               owl:someValuesFrom :Near_water
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :moves_by ;
+                               owl:allValuesFrom :Slithering
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :is_endogenous ;
+                               owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                   owl:oneOf [ rdf:type rdf:List ;
+                                                               rdf:first "true"^^xsd:boolean ;
+                                                               rdf:rest rdf:nil
+                                                             ]
+                                                 ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :is_venomous ;
+                               owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                   owl:oneOf [ rdf:type rdf:List ;
+                                                               rdf:first "true"^^xsd:boolean ;
+                                                               rdf:rest rdf:nil
+                                                             ]
+                                                 ]
+                             ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Toxic
+:Toxic rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Class ;
+                             owl:unionOf ( [ rdf:type owl:Restriction ;
+                                             owl:onProperty :is_poisonous ;
+                                             owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                 owl:oneOf [ rdf:type rdf:List ;
+                                                                             rdf:first "true"^^xsd:boolean ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                               ]
+                                           ]
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :is_venomous ;
+                                             owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                 owl:oneOf [ rdf:type rdf:List ;
+                                                                             rdf:first "true"^^xsd:boolean ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                               ]
+                                           ]
+                                         )
+                           ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Trap
+:Trap rdf:type owl:Class ;
+      rdfs:subClassOf :Predation_strategy .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Vivipare
+:Vivipare rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :Animal
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :lay_eggs ;
+                                                       owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:oneOf [ rdf:type rdf:List ;
+                                                                                       rdf:first "false"^^xsd:boolean ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                         ]
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Walking
+:Walking rdf:type owl:Class ;
+         rdfs:subClassOf :Locomotion .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Warm-blooded
+:Warm-blooded rdf:type owl:Class ;
+              rdfs:subClassOf :Thermoregulation .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Water
+:Water rdf:type owl:Class ;
+       rdfs:subClassOf :Environement .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Weapons
+:Weapons rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Wedge-tailed_eagle
+:Wedge-tailed_eagle rdf:type owl:Class ;
+                    rdfs:subClassOf :Birds ,
+                                    :Large_animal ,
+                                    [ rdf:type owl:Class ;
+                                      owl:complementOf :Toxic
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :eats ;
+                                      owl:someValuesFrom :Small_animal
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :attacks_with ;
+                                      owl:allValuesFrom [ owl:intersectionOf ( :Beak
+                                                                               :Claw
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :moves_by ;
+                                      owl:allValuesFrom [ rdf:type owl:Class ;
+                                                          owl:unionOf ( :Flying
+                                                                        :Walking
+                                                                      )
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :predates_by ;
+                                      owl:allValuesFrom :Chase
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :conservation_status ;
+                                      owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                          owl:oneOf [ rdf:type rdf:List ;
+                                                                      rdf:first "LC" ;
+                                                                      rdf:rest rdf:nil
+                                                                    ]
+                                                        ]
+                                    ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#White-lipped_snake
+:White-lipped_snake rdf:type owl:Class ;
+                    rdfs:subClassOf :Large_animal ,
+                                    :Snake ,
+                                    [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :eats ;
+                                                             owl:someValuesFrom :Small_animal
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :eats ;
+                                                             owl:allValuesFrom :Skink
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :moves_by ;
+                                      owl:allValuesFrom :Slithering
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :is_endogenous ;
+                                      owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                          owl:oneOf [ rdf:type rdf:List ;
+                                                                      rdf:first "true"^^xsd:boolean ;
+                                                                      rdf:rest rdf:nil
+                                                                    ]
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :is_venomous ;
+                                      owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                          owl:oneOf [ rdf:type rdf:List ;
+                                                                      rdf:first "true"^^xsd:boolean ;
+                                                                      rdf:rest rdf:nil
+                                                                    ]
+                                                        ]
+                                    ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Wild_boar
+:Wild_boar rdf:type owl:Class ;
+           rdfs:subClassOf :Large_animal ,
+                           :Placentals ,
+                           [ rdf:type owl:Class ;
+                             owl:complementOf :Toxic
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :eats ;
+                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :Frog
+                                                                :Lizard
+                                                                :Plant
+                                                                :Snake
+                                                              )
+                                                ]
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :moves_by ;
+                             owl:allValuesFrom :Walking
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :conservation_status ;
+                             owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                 owl:oneOf [ rdf:type rdf:List ;
+                                                             rdf:first "LC" ;
+                                                             rdf:rest rdf:nil
+                                                           ]
+                                               ]
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hibernates ;
+                             owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                 owl:oneOf [ rdf:type rdf:List ;
+                                                             rdf:first "false"^^xsd:boolean ;
+                                                             rdf:rest rdf:nil
+                                                           ]
+                                               ]
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :is_endogenous ;
+                             owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                 owl:oneOf [ rdf:type rdf:List ;
+                                                             rdf:first "false"^^xsd:boolean ;
+                                                             rdf:rest rdf:nil
+                                                           ]
+                                               ]
+                           ] .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Woodlands
+:Woodlands rdf:type owl:Class ;
+           rdfs:subClassOf :Environement .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Gould's_wattled_bat
+<http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Gould's_wattled_bat> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf :Bat ,
+                                                                                                :Small_animal ,
+                                                                                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                         owl:onProperty :eats ;
+                                                                                                                         owl:someValuesFrom :Insect
+                                                                                                                       ]
+                                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                                         owl:onProperty :eats ;
+                                                                                                                         owl:someValuesFrom :Small_animal
+                                                                                                                       ]
+                                                                                                                     ) ;
+                                                                                                  rdf:type owl:Class
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Class ;
+                                                                                                  owl:complementOf :Toxic
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty :lives_in ;
+                                                                                                  owl:someValuesFrom :Woodlands
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty :moves_by ;
+                                                                                                  owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                                                      owl:unionOf ( :Flying
+                                                                                                                                    :Walking
+                                                                                                                                  )
+                                                                                                                    ]
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty :conservation_status ;
+                                                                                                  owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                      owl:oneOf [ rdf:type rdf:List ;
+                                                                                                                                  rdf:first "LC" ;
+                                                                                                                                  rdf:rest rdf:nil
+                                                                                                                                ]
+                                                                                                                    ]
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty :hibernates ;
+                                                                                                  owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                      owl:oneOf [ rdf:type rdf:List ;
+                                                                                                                                  rdf:first "true"^^xsd:boolean ;
+                                                                                                                                  rdf:rest rdf:nil
+                                                                                                                                ]
+                                                                                                                    ]
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty :is_endogenous ;
+                                                                                                  owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                      owl:oneOf [ rdf:type rdf:List ;
+                                                                                                                                  rdf:first "true"^^xsd:boolean ;
+                                                                                                                                  rdf:rest rdf:nil
+                                                                                                                                ]
+                                                                                                                    ]
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty :is_nocturnal ;
+                                                                                                  owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                      owl:oneOf [ rdf:type rdf:List ;
+                                                                                                                                  rdf:first "true"^^xsd:boolean ;
+                                                                                                                                  rdf:rest rdf:nil
+                                                                                                                                ]
+                                                                                                                    ]
+                                                                                                ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Blochy
+:Blochy rdf:type owl:NamedIndividual ,
+                 :Blotched_blue-tongued_lizard .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Danger_noodle
+:Danger_noodle rdf:type owl:NamedIndividual ,
+                        :White-lipped_snake .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Jacqueline
+:Jacqueline rdf:type owl:NamedIndividual ,
+                     :Goat .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#Platy
+:Platy rdf:type owl:NamedIndividual ,
+                :Platypus .
+
+
+###  http://www.semanticweb.org/jxa/ontologies/2019/3/tasmania#kango
+:kango rdf:type owl:NamedIndividual ,
+                :Eastern_grey_kangaroo .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Amphibians
+                :Birds
+                :Mammal
+                :Reptile
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Marsupials
+                :Monotremes
+                :Placentals
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
